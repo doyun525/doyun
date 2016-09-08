@@ -2,7 +2,7 @@ import java.awt.List;
 import java.util.ArrayList;
 
 public class Searching {
-	public ArrayList<Integer> sequentialSearchN(int data[],int target) { //¼ıÀÚ ¹è¿­¿¡¼­ Æ¯Á¤ ¼ıÀÚ°¡ ÀÖ´Â ¹è¿­ÀÇ ÀÎµ¦½º¸¦ ¸®ÅÏ
+	public ArrayList<Integer> sequentialSearch(int data[],int target) { //ìˆ«ì ë°°ì—´ì—ì„œ íŠ¹ì • ìˆ«ìê°€ ìˆëŠ” ë°°ì—´ì˜ ì¸ë±ìŠ¤ë¥¼ ë¦¬í„´
 		ArrayList<Integer> index = new ArrayList<Integer>();
 		for(int i=0;i<data.length;i++){
 			if(data[i]==target)
@@ -11,7 +11,7 @@ public class Searching {
 		return index;
 	}
 	
-	public ArrayList<Integer> sequentialSearchS(String data[],char target) { //´Ü¾î°¡ ÀÖ´Â ¹®ÀÚ¿­ ¹è¿­¿¡¼­ Æ¯Á¤ ¹®ÀÚ°¡ ÀÖ´Â ¹è¿­ÀÇ ÀÎµ¦½º¸¦ ¸®ÅÏ
+	public ArrayList<Integer> sequentialSearch(String data[],char target) { //ë‹¨ì–´ê°€ ìˆëŠ” ë¬¸ìì—´ ë°°ì—´ì—ì„œ íŠ¹ì • ë¬¸ìê°€ ìˆëŠ” ë°°ì—´ì˜ ì¸ë±ìŠ¤ë¥¼ ë¦¬í„´
 		ArrayList<Integer> index = new ArrayList<Integer>();
 		for(int i=0;i<data.length;i++){
 			char[] c = data[i].toCharArray();
@@ -31,8 +31,8 @@ public class Searching {
 		int target = 7;
 		char Starget = 'a';
 		Searching search = new Searching();
-		ArrayList<Integer> targetindexN = search.sequentialSearchN(data, target);
-		ArrayList<Integer> targetindexS = search.sequentialSearchS(Sdata, Starget);
+		ArrayList<Integer> targetindexN = search.sequentialSearch(data, target);
+		ArrayList<Integer> targetindexS = search.sequentialSearch(Sdata, Starget);
 		
 		System.out.print("Starget = "+Starget);
 		for(int i=0;i<targetindexS.size();i++) System.out.print(" , Sdata["+targetindexS.get(i)+"] = " + Sdata[targetindexS.get(i)]);
