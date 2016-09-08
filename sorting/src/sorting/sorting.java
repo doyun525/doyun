@@ -1,7 +1,7 @@
 package sorting;
 
 public class sorting {
-	public void quicksortingN(int data[], int left, int right){
+	public void quicksorting(int data[], int left, int right){
 		int l=left, r=right;
 		int p = data[(l+r)/2];
 		do{
@@ -14,8 +14,8 @@ public class sorting {
 				l++; r--;
 			}			
 		}while(l<=r);
-		if(left<r) quicksortingN(data, left, r);
-		if(right>l) quicksortingN(data, l, right);
+		if(left<r) quicksorting(data, left, r);
+		if(right>l) quicksorting(data, l, right);
 	}
 	public char charUpper(char a) {
 		if(a>='A'&&a<='Z') 
@@ -24,7 +24,7 @@ public class sorting {
 			return (char) (a-'a'+'A');
 		else return a;
 	}
-	public void quicksortingS(String data[], int left, int right){
+	public void quicksorting(String data[], int left, int right){
 		int l=left, r=right;
 		char p = charUpper(data[(l+r)/2].charAt(0));
 		do{
@@ -37,16 +37,16 @@ public class sorting {
 				l++; r--;
 			}			
 		}while(l<=r);
-		if(left<r) quicksortingS(data, left, r);
-		if(right>l) quicksortingS(data, l, right);
+		if(left<r) quicksorting(data, left, r);
+		if(right>l) quicksorting(data, l, right);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int data[] = {5,7,9,1,2,6,0,4,3,8};
 		String Sdata[] = {"book","about","Cpu","quick"};
 		sorting sorting = new sorting();
-		sorting.quicksortingN(data, 0, data.length-1);
-		sorting.quicksortingS(Sdata, 0, Sdata.length-1);
+		sorting.quicksorting(data, 0, data.length-1);
+		sorting.quicksorting(Sdata, 0, Sdata.length-1);
 		for(int i = 0; i < data.length ; i++){
 			System.out.println("data["+i+"] = "+data[i]);
 			
